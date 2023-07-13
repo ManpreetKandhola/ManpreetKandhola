@@ -1,0 +1,14 @@
+name: complex
+
+on: push
+
+jobs:
+  windows:
+    run-on: windows-latest
+    steps:
+    -run: date
+  dependency:
+    needs: [windows]
+    steps:
+      - run: date
+      
